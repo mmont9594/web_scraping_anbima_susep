@@ -1,1 +1,1 @@
-ECHO está ativado.
+
