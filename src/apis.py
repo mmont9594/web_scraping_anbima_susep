@@ -19,8 +19,3 @@ class InfoFromAnbima():
             response = requests.post(url=url, data=payload)
             ettj_parameters = pd.read_csv(StringIO(response.content.decode('utf-8')), sep=';', decimal='.', nrows=2)        
         return ettj_parameters
-
-
-data_ettj = InfoFromAnbima(date=datetime.date(2023, 11, 22), info_type='ETTJ')
-ettj_data = data_ettj.get_data()
-print(ettj_data)
